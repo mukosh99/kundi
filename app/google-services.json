@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "728197288771",
+    "firebase_url": "https://kundi5-94896.firebaseio.com",
+    "project_id": "kundi5-94896",
+    "storage_bucket": "kundi5-94896.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:728197288771:android:a4edc90c2fc2d0d86e55f6",
+        "android_client_info": {
+          "package_name": "com.example.kundi5"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "728197288771-m4s1cdpgjp8od82hvcebleeb2gcbqj1d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.kundi5",
+            "certificate_hash": "3c7152c723ab9e3c13720883457d61d071e50de5"
+          }
+        },
+        {
+          "client_id": "728197288771-7hnf4hc1ct0jeamsq80kfm3i72du7u25.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCl9s2Tb1_EQqbzLny47uexOCQ59gUggpc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "728197288771-7hnf4hc1ct0jeamsq80kfm3i72du7u25.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

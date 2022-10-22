@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="?attr/selectableItemBackground"
+    android:layout_margin="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:background="@color/whitish">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/participants_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/profile_image" />
+
+        <TextView
+            android:id="@+id/participants_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="4dp"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@id/participants_image"
+            android:fontFamily="@font/montserrat"
+            android:text="User Name"
+            android:textColor="@color/colorPrimary"
+            android:textAlignment="textStart"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"/>/>
+
+        <TextView
+            android:id="@+id/participants_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/participants_name"
+            android:layout_marginStart="4dp"
+            android:layout_toEndOf="@id/participants_image"
+            android:fontFamily="@font/montserrat"
+            android:text="Status"
+            android:textAlignment="textStart"
+            android:textColor="@color/colorPrimary"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"/>/>
+
+        <Button
+            android:id="@+id/add_group_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/button_signin_background"
+            android:fontFamily="@font/montserrat"
+            android:layout_alignParentEnd="true"
+            android:text="Add"
+            android:textAllCaps="false"
+            android:textColor="@color/myColor1" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

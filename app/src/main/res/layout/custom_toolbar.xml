@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_app_bar"
+    android:background="@color/colorPrimary"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:theme="@style/MyToolBarTheme"
+    app:popupTheme="@style/MyPopupTheme">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/groupImageView"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="4dp"
+        android:layout_centerVertical="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/profile_image"/>
+
+    <TextView
+        android:id="@+id/group_name_chat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/groupImageView"
+        android:textColor="@color/myColor1"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+        <TextView
+            android:id="@+id/chat_typing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/myColor1"
+            android:layout_toEndOf="@+id/groupImageView"
+            android:layout_below="@+id/group_name_chat"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+            android:maxLines="1"/>
+
+
+    </RelativeLayout>
+
+</androidx.appcompat.widget.Toolbar>

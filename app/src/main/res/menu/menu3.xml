@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/clear_chats_option"
+        android:title="Clear Chats Log"
+        app:showAsAction="never">
+
+    </item>
+    <item
+        android:id="@+id/settings_option"
+        android:title="Settings"
+        app:showAsAction="never">
+
+    </item>
+    <item
+        android:id="@+id/file_option"
+        android:title="Settings"
+        android:icon="@drawable/attach_file"
+        app:showAsAction="always">
+
+    </item>
+    <item
+        android:id="@+id/media_option"
+        android:title="Group Media"
+        app:showAsAction="never">
+    </item>
+
+
+
+
+</menu>

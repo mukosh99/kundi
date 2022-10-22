@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/find_friends_option"
+        android:title="Add Participants"
+        app:showAsAction="never">
+
+    </item>
+    <item
+        android:id="@+id/group_info_option"
+        android:title="Group Info"
+        app:showAsAction="never">
+
+    </item>
+
+    <item
+        android:title="Donations"
+        app:showAsAction="never">
+        <menu>
+            <item
+                android:id="@+id/pledge_option"
+                android:title="Pledge"
+                app:showAsAction="never">
+
+            </item>
+            <item
+                android:id="@+id/view_pledge_option"
+                android:title="View Pledges"
+                app:showAsAction="never">
+
+            </item>
+            <item
+                android:id="@+id/view_donations_option"
+                android:title="View Donations"
+                app:showAsAction="never">
+
+            </item>
+            <item
+                android:id="@+id/add_donations_option"
+                android:title="Add Donations"
+                app:showAsAction="never">
+
+            </item>
+        </menu>
+    </item>
+
+</menu>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/myColor3"
+    android:orientation="vertical"
+    android:clipToPadding="false"
+    android:overScrollMode="never"
+    android:scrollbars="none"
+    tools:context=".ProfileActivity">
+
+    <include
+            android:id="@+id/main_page_toolbar"
+            layout="@layout/app_bar_layout"/>
+
+    <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_gravity="center_horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circleImageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/profile_image"/>
+
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/add_image"
+            app:tint="@color/image" />
+
+        <ImageView
+            android:id="@+id/imageRemove"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            app:srcCompat="@drawable/delete_3"
+            app:tint="@color/image" />
+
+    </FrameLayout>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="5dp"
+        android:padding="10dp"
+        android:background="@drawable/background_content"
+        android:textAlignment="textStart">
+
+        <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:hint="Add Name"
+                android:inputType="textMultiLine|textCapSentences"
+                android:textColor="@color/primary_text"
+                android:drawableStart="@drawable/person"
+                android:drawableTint="@color/image"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                android:gravity="center_vertical"
+                android:drawablePadding="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorPrimary"
+            android:layout_margin="5dp"/>
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:hint="Add Status"
+                android:inputType="textMultiLine|textCapSentences"
+                android:drawableStart="@drawable/edit"
+                android:gravity="center_vertical"
+                android:drawableTint="@color/image"
+                android:drawablePadding="10dp"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                android:textColor="@color/primary_text"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorPrimary"
+            android:layout_margin="5dp"/>
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:hint="Add Email"
+                android:drawableStart="@drawable/email1"
+                android:gravity="center_vertical"
+                android:drawableTint="@color/image"
+                android:drawablePadding="10dp"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                android:layout_marginBottom="5dp"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/primary_text"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorPrimary"
+            android:layout_margin="5dp"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</LinearLayout>

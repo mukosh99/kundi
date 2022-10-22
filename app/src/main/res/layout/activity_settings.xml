@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/myColor3"
+    android:clipToPadding="false"
+    android:overScrollMode="never"
+    android:scrollbars="none"
+    tools:context=".SettingsActivity">
+
+    <include
+            android:id="@+id/main_page_toolbar"
+            layout="@layout/app_bar_layout"/>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_gravity="center_horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circleImageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/profile_image"/>
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/add_image"
+            app:tint="@color/image" />
+
+    </FrameLayout>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/background_content"
+        android:gravity="center_horizontal"
+        android:textAlignment="center">
+
+
+    <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                app:startIconDrawable="@drawable/person"
+                app:startIconTint="@color/image"
+                android:backgroundTint="@color/image"
+                android:layout_height="wrap_content"
+                android:hint="Enter Name"
+                app:endIconMode="clear_text"
+                app:helperText="Required*"
+                app:boxBackgroundMode="outline"
+                app:helperTextTextColor="@color/error"
+                app:boxCornerRadiusTopEnd="16dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:inputType="text"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/set_user_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:importantForAutofill="no"
+                    android:maxLength="10"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:startIconDrawable="@drawable/status"
+                app:startIconTint="@color/image"
+                android:backgroundTint="@color/image"
+                android:hint="Enter Status"
+                app:boxBackgroundMode="outline"
+                app:helperText="Optional"
+                app:counterEnabled="true"
+                app:counterMaxLength="30"
+                app:boxCornerRadiusTopEnd="16dp"
+                app:helperTextTextColor="@color/colorAccent"
+                app:endIconMode="clear_text"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/set_profile_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:importantForAutofill="no"
+                    android:inputType="text"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:startIconDrawable="@drawable/email1"
+                app:startIconTint="@color/image"
+                android:backgroundTint="@color/image"
+                android:hint="Enter Email"
+                app:helperText="Optional"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusTopEnd="13dp"
+                app:helperTextTextColor="@color/colorAccent"
+                app:endIconMode="custom"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:inputType="textMultiLine"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/set_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:textColor="@color/primary_text"
+                    android:importantForAutofill="no"
+                    android:inputType="textEmailAddress"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/update_settings_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_signin_background"
+                android:fontFamily="@font/montserrat"
+                android:text="Create Profile"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:textColor="@color/myColor1"
+                android:layout_marginTop="25dp"
+                android:textStyle="bold" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+

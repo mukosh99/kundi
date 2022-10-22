@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/myColor3"
+    tools:context=".PledgesDisplayActivity">
+
+    <include
+        android:id="@+id/main_page_toolbar"
+        layout="@layout/app_bar_layout">
+
+    </include>
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/main_page_toolbar"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp">
+
+        <TextView
+            android:id="@+id/target_tx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:fontFamily="@font/montserrat"
+            android:text="Target Amt"
+            android:textAlignment="textStart"
+            android:textColor="@color/colorPrimaryDark"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"/>
+
+        <TextView
+            android:id="@+id/target1_tx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/target_tx"
+            android:layout_alignParentStart="true"
+            android:fontFamily="@font/montserrat"
+            android:text="Kshs:"
+            android:textAlignment="textStart"
+            android:textColor="@color/error"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"/>
+
+        <TextView
+            android:id="@+id/target_amt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/target1_tx"
+            android:layout_below="@+id/target_tx"
+            android:fontFamily="@font/montserrat"
+            android:text="---"
+            android:textAlignment="textStart"
+            android:textColor="@color/myColor1"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"/>
+
+        <TextView
+            android:id="@+id/total_donations_tx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/target1_tx"
+            android:fontFamily="@font/montserrat"
+            android:text="Total Donations Amt"
+            android:textAlignment="textStart"
+            android:textColor="@color/colorPrimaryDark"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"/>
+
+        <TextView
+            android:id="@+id/donations1_tx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/total_donations_tx"
+            android:fontFamily="@font/montserrat"
+            android:text="Kshs:"
+            android:textAlignment="textStart"
+            android:textColor="@color/error"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"/>
+
+        <TextView
+            android:id="@+id/total_donations"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/total_donations_tx"
+            android:layout_toEndOf="@+id/donations1_tx"
+            android:fontFamily="@font/montserrat"
+            android:text="---"
+            android:textAlignment="textStart"
+            android:textColor="@color/myColor1"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_below="@id/RelativeLayout3">
+
+        <TextView
+            android:id="@+id/no_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
+            android:textColor="@color/colorPrimary"
+            android:text="Donations (N)"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"/>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/RelativeLayout1"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
+        android:background="@drawable/background_content">
+
+    <TextView
+        android:id="@+id/wordView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:fontFamily="@font/montserrat"
+        android:hint="You Have No Donations Yet..."
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/colorPrimary"
+        android:visibility="visible"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/donationsRv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp"
+        android:clipToPadding="false"
+        android:overScrollMode="never"
+        tools:listitem="@layout/donations" />
+</FrameLayout>
+
+</RelativeLayout>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@color/myColor3"
+    tools:context=".GroupChatActivity">
+
+    <include
+        android:id="@+id/main_custom_toolbar"
+        layout="@layout/custom_toolbar">
+
+    </include>
+
+    <FrameLayout
+        android:id="@+id/frame1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/main_custom_toolbar"
+        android:layout_marginTop="58dp"
+        android:background="@drawable/background_content">
+
+        <TextView
+            android:id="@+id/wordView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:fontFamily="@font/montserrat"
+            android:hint="You Have No Chats Yet...\nStart Chatting...\nWith Other Group Participants..."
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/colorPrimary"
+            android:visibility="visible" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler"
+            android:layout_width="match_parent"
+            android:padding="5dp"
+            android:layout_marginBottom="55dp"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:overScrollMode="never"
+            android:orientation="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:stackFromEnd="true"
+            tools:listitem="@layout/group_messages_layout_left" />
+
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_margin="3dp"
+        android:background="@drawable/background_chat_input"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/select_file_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@null"
+            android:visibility="gone"
+            app:srcCompat="@drawable/attach_file" />
+
+        <ImageButton
+            android:id="@+id/select_emoji_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@null"
+            app:srcCompat="@drawable/emoji" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/input_group_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/input_background"
+                android:clickable="true"
+                android:scrollbars="vertical"
+                android:scrollbarStyle="insideInset"
+                android:fontFamily="@font/montserrat"
+                android:hint="Start Typing..."
+                android:imeOptions="actionDone"
+                android:importantForAutofill="no"
+                android:inputType="textMultiLine|textCapSentences"
+                android:padding="5dp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/select_image_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@null"
+            app:srcCompat="@drawable/photo_camera" />
+
+        <ImageButton
+            android:id="@+id/send_message_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@null"
+            app:srcCompat="@drawable/send_message" />
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
